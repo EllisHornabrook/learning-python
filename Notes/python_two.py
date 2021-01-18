@@ -57,3 +57,28 @@ class Planet:
 
 mars = Planet('Mars', 'no', 'planet')
 print(mars.description())
+
+
+### METHODS ###
+class Star_wars:
+
+    fanbase = 'World-wide'
+    owners = 'Disney'    
+        # set data for class
+
+    def __init__(self, lightsaber, name, side):
+        self.lightsaber = lightsaber
+        self.name = name
+        self.side = side
+
+    @classmethod
+    def jedi_names(cls):
+        return f'The company that own the rights to Star Wars are {cls.owners}'
+        # cls targets data stored in the class
+
+    @staticmethod
+    def description(desc = 'collection of films'):
+        # only takes in parameters you set (desc)
+        return f'Star Wars is a {desc}'
+
+print(Star_wars.jedi_names())
