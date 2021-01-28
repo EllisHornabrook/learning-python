@@ -1,15 +1,16 @@
 class Planet:
-    def __init__(self, name, life, type):
+    def __init__(self, name, life, gravity, radius):
         self.name = name
         self.life = life
-        self.gravity = 'Yes'
+        self.gravity = gravity
+        self.radius = radius
+        self.type = 'planet'
             # can also be set in the class
-        self.type = type
 
     def description(self):
         return f'{self.name} is a {self.type}'
 
-mars = Planet('Mars', 'no', 'planet')
+mars = Planet('Mars', 'no', 20000, 14)
 print(mars.description())
 
 
